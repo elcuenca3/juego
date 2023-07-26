@@ -296,7 +296,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 54.6
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -627,6 +627,7 @@ MonoBehaviour:
   Traction: 1
   pushForce: 2
   timepower: 5
+  vida: 50
   healthBar: {fileID: 6812278757726896971}
 --- !u!114 &7840242437777918784
 MonoBehaviour:

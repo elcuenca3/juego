@@ -21,7 +21,7 @@ public class tiempo : MonoBehaviour
     {
         tiempoActual -= Time.deltaTime;
         texto.text = "" + tiempoActual.ToString("F0");
-        print(tiempoActual);
+        // print(tiempoActual);
         if (tiempoActual <= 0f)
         {
             CambiarEscena();

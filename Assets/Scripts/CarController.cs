@@ -28,8 +28,10 @@ public class CarController : MonoBehaviour
 
     private bool counting = false;
 
-    public int vida = 50;
+    public int vida = 100;
     public Slider healthBar;
+    public int danio = 5;
+    public int continerdanio = 0;
 
     void Start()
     {
@@ -39,6 +41,7 @@ public class CarController : MonoBehaviour
         freno = 0;
         tiempoActual = timepower;
         texto.text = "" + vida;
+        continerdanio = danio;
         // print("Vida actual : "+vida);
     }
 
@@ -53,7 +56,9 @@ public class CarController : MonoBehaviour
         }
         if (counting)
         {
+            print("se lo quite ");
             tiempoActual -= Time.deltaTime;
+            print(tiempoActual);
         }
         if (tiempoActual <= 0)
         {
@@ -61,6 +66,8 @@ public class CarController : MonoBehaviour
             tiempoActual = timepower;
             MaxSpeed = contenerdorMax;
             MoveSpeed = contenerdor;
+            danio = continerdanio;
+            print("recupero el daño");
         }
 
         // Moving
@@ -82,7 +89,6 @@ public class CarController : MonoBehaviour
             * MoveForce.magnitude;
         // print(tiempoActual);
         healthBar.value = vida;
-    
     }
 
     void OnCollisionEnter(Collision collision)
@@ -105,19 +111,22 @@ public class CarController : MonoBehaviour
         else if (collision.gameObject.CompareTag("powervida"))
         {
             print("vida OBTENIDA ");
-            vida = vida + 5;
+            vida = vida + danio;
             // print("vida ya curada "+vida);
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("pilar"))
         {
-            vida = vida - 5;
+            vida = vida - danio;
             print("vida quitada:" + vida);
         }
         else if (collision.gameObject.CompareTag("cuerpo"))
         {
-            vida = vida - 5;
+            vida = vida - danio;
             print("vida quitada: npc" + vida);
+            velociad();
+            print("daño actual: " + danio);
+            // danio = 0;
 
             if (vida <= 0)
             {

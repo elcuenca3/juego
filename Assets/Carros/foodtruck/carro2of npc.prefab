@@ -176,7 +176,6 @@ GameObject:
   m_Component:
   - component: {fileID: 173631155057331175}
   - component: {fileID: 8152869478207225660}
-  - component: {fileID: 173950543890631354}
   - component: {fileID: 4174946659907026336}
   - component: {fileID: 7965321022535046070}
   - component: {fileID: 5810704063296569337}
@@ -221,23 +220,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &173950543890631354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658383375346848093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1af44bb3cfe0d8499043617bdee83d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 50
-  MaxSpeed: 15
-  Drag: 0.98
-  SteerAngle: 20
-  Traction: 1
 --- !u!65 &4174946659907026336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -289,6 +271,8 @@ MonoBehaviour:
   timepower: 5
   vida: 50
   healthBar: {fileID: 1057277210779239009}
+  danio: 5
+  continerdanio: 0
 --- !u!1 &1072806298454283881
 GameObject:
   m_ObjectHideFlags: 0
