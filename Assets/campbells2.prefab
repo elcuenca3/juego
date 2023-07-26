@@ -425,6 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5362556811486748384}
   - component: {fileID: 5611793545980529078}
+  - component: {fileID: 9099946463723544607}
   m_Layer: 0
   m_Name: campbells2
   m_TagString: powervelociad
@@ -467,6 +468,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.127228, y: 9.514863, z: 6.3639984}
   m_Center: {x: -0.091560364, y: 4.2574315, z: 0.22186661}
+--- !u!95 &9099946463723544607
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692875806378329178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0976ba1a70a03c041b89988fe223801e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7383218980080676022
 GameObject:
   m_ObjectHideFlags: 0
