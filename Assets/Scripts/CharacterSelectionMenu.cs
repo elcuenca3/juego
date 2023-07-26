@@ -9,7 +9,7 @@ public class CharacterSelectionMenu : MonoBehaviour
     public GameObject[] playerObjects;
     public int selectedCharacter = 0;
 
-    public string gameScene = "arenanew";
+    public string gameScene = "arena2.1";
 
     private string selectedCharacterDataName = "SelectedCharacter";
 
@@ -60,7 +60,7 @@ public class CharacterSelectionMenu : MonoBehaviour
 
     public void Arenanew()
 	{
-		SceneManager.LoadScene("arenanew");
+		SceneManager.LoadScene("arena2.1");
 	}
 
 

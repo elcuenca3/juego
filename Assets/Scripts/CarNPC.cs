@@ -113,12 +113,12 @@ public class CarNPC : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("pilar"))
         {
-            vida = vida - 10;
+            vida = vida - 1;
             print("vida quitada:" + vida);
         }
                 else if (collision.gameObject.CompareTag("cuerpo"))
         {
-            vida = vida - 10;
+            vida = vida - 1;
             print("vida quitada:" + vida);
         }
     }
