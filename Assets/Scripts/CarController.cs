@@ -28,13 +28,15 @@ public class CarController : MonoBehaviour
 
     private bool counting = false;
 
-    public int vida = 100;
+    public int vida = 1000;
     public Slider healthBar;
-    public int danio = 5;
-    public int continerdanio = 0;
+    public int danio = 25;
+    public int continerdanio;
 
     void Start()
     {
+        vida = 1000;
+        danio = 25;
         rb = GetComponent<Rigidbody>();
         contenerdor = MoveSpeed;
         contenerdorMax = MaxSpeed;
@@ -42,6 +44,7 @@ public class CarController : MonoBehaviour
         tiempoActual = timepower;
         texto.text = "" + vida;
         continerdanio = danio;
+
         // print("Vida actual : "+vida);
     }
 
@@ -123,21 +126,34 @@ public class CarController : MonoBehaviour
         else if (collision.gameObject.CompareTag("cuerpo"))
         {
             vida = vida - danio;
-            print("vida quitada: npc" + vida);
+            print("vida actual: jugador" + vida);
+            // if(danio > 0){
             velociad();
-            print("daño actual: " + danio);
+            // }
+            print("daño actual jugador: " + danio);
             // danio = 0;
 
             if (vida <= 0)
             {
+                vida = 0;
                 print("se destruyo" + collision.gameObject);
-                Destroy(collision.gameObject);
+                SceneManager.LoadScene("game_over");
             }
+        }
+        else if (collision.gameObject.CompareTag("trofeo"))
+        {
+            SceneManager.LoadScene("victoria");
+        }
+        else if (collision.gameObject.CompareTag("METEORO"))
+        {
+            vida =0;
+            Destroy(collision.gameObject);
         }
     }
 
     void velociad()
     {
+        // danio = 0;
         counting = true;
     }
 

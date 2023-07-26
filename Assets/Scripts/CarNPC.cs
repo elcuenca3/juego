@@ -1,6 +1,9 @@
-using UnityEngine;
-using UnityEngine.AI;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CarNPC : MonoBehaviour
 {
@@ -13,12 +16,16 @@ public class CarNPC : MonoBehaviour
 
     private float tiempoActual;
     public float timepower = 5f;
-    private int vida = 100;
+    private int vida = 1000;
+    private int danio = 50;
     private bool counting = false;
+    public Slider healthBar;
 
     private void Start()
     {
         randomTarget = GetRandomTarget(); // Obtiene un objetivo aleatorio inicial
+        vida = 1000;
+        danio = 50;
     }
 
     private void Update()
@@ -87,6 +94,7 @@ public class CarNPC : MonoBehaviour
             );
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
+        healthBar.value = vida;
     }
 
     private Vector3 GetRandomTarget()
@@ -106,7 +114,7 @@ public class CarNPC : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("powervida"))
         {
-            print("vida OBTENIDA ");
+            // print("vida OBTENIDA ");
             vida = vida + 10;
             // print("vida ya curada "+vida);
             Destroy(collision.gameObject);
@@ -114,12 +122,27 @@ public class CarNPC : MonoBehaviour
         else if (collision.gameObject.CompareTag("pilar"))
         {
             vida = vida - 1;
-            print("vida quitada:" + vida);
+            // print("vida quitada:" + vida);
         }
-                else if (collision.gameObject.CompareTag("cuerpo"))
+        else if (collision.gameObject.CompareTag("cuerpo"))
         {
-            vida = vida - 1;
-            print("vida quitada:" + vida);
+            vida = vida - danio;
+            // print("vida quitada:" + vida);
+            if (vida <= 0)
+            {
+                vida = 0;
+                print("se destruyo" + collision.gameObject);
+                Destroy(collision.gameObject);
+            }
+        }
+        else if (collision.gameObject.CompareTag("trofeo"))
+        {
+            SceneManager.LoadScene("game_over");
+        }
+        else if (collision.gameObject.CompareTag("METEORO"))
+        {
+            vida= 0;
+            Destroy(collision.gameObject);
         }
     }
 

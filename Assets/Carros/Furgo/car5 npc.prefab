@@ -4015,7 +4015,6 @@ GameObject:
   - component: {fileID: 1581089245063614799}
   - component: {fileID: 6596404917497529890}
   - component: {fileID: 3738189685472749436}
-  - component: {fileID: 5319790018179918389}
   m_Layer: 0
   m_Name: car5 npc
   m_TagString: cuerpo
@@ -4086,6 +4085,7 @@ MonoBehaviour:
   moveSpeed: 50
   rotationSpeed: 2
   timepower: 5
+  healthBar: {fileID: 6016864116546059398}
 --- !u!64 &3738189685472749436
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4100,30 +4100,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7208539155126182133, guid: 588d7d53e35bdd5428645649d4c1a3e8, type: 3}
---- !u!114 &5319790018179918389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3154073900228834868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88076ec68d7238b4baf958281e2311ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texto: {fileID: 0}
-  MoveSpeed: 0
-  MaxSpeed: 0
-  Drag: 0
-  SteerAngle: 0
-  Traction: 1
-  pushForce: 2
-  timepower: 5
-  vida: 50
-  healthBar: {fileID: 6016864116546059398}
-  danio: 5
-  continerdanio: 0
 --- !u!1 &3189184056647562923
 GameObject:
   m_ObjectHideFlags: 0
@@ -6034,9 +6010,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1000
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

@@ -12,6 +12,10 @@ TagManager:
   - caer
   - npc
   - cuerpo
+  - trofeo
+  - plataforma
+  - METEORO
+  - suelo
   layers:
   - Default
   - TransparentFX

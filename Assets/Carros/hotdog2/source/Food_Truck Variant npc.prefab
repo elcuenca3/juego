@@ -294,9 +294,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1000
   m_WholeNumbers: 0
-  m_Value: 54.6
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -607,28 +607,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.910565, y: 2.8684063, z: 3.8025608}
   m_Center: {x: 0.15897256, y: 1.4732723, z: 0.55962324}
---- !u!114 &1726199839410886900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8728401404975295131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88076ec68d7238b4baf958281e2311ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texto: {fileID: 0}
-  MoveSpeed: 0
-  MaxSpeed: 0
-  Drag: 0
-  SteerAngle: 0
-  Traction: 1
-  pushForce: 2
-  timepower: 5
-  vida: 50
-  healthBar: {fileID: 6812278757726896971}
 --- !u!114 &7840242437777918784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,3 +623,4 @@ MonoBehaviour:
   moveSpeed: 50
   rotationSpeed: 2
   timepower: 5
+  healthBar: {fileID: 6812278757726896971}
