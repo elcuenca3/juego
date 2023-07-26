@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,6 +32,7 @@ public class CarController : MonoBehaviour
     public Slider healthBar;
     public int danio = 25;
     public int continerdanio;
+    public bool dame = false;
 
     void Start()
     {
@@ -42,7 +43,7 @@ public class CarController : MonoBehaviour
         contenerdorMax = MaxSpeed;
         freno = 0;
         tiempoActual = timepower;
-        texto.text = "" + vida;
+        //texto.text = "" + vida;
         continerdanio = danio;
 
         // print("Vida actual : "+vida);
@@ -59,9 +60,9 @@ public class CarController : MonoBehaviour
         }
         if (counting)
         {
-            print("se lo quite ");
+            //print("se lo quite ");
             tiempoActual -= Time.deltaTime;
-            print(tiempoActual);
+            //print(tiempoActual);
         }
         if (tiempoActual <= 0)
         {
@@ -70,7 +71,7 @@ public class CarController : MonoBehaviour
             MaxSpeed = contenerdorMax;
             MoveSpeed = contenerdor;
             danio = continerdanio;
-            print("recupero el daño");
+            //print("recupero el daño");
         }
 
         // Moving
@@ -91,7 +92,11 @@ public class CarController : MonoBehaviour
             Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime)
             * MoveForce.magnitude;
         // print(tiempoActual);
+        if(dame){
+
         healthBar.value = vida;
+        dame = false;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -121,24 +126,25 @@ public class CarController : MonoBehaviour
         else if (collision.gameObject.CompareTag("pilar"))
         {
             vida = vida - danio;
-            print("vida quitada:" + vida);
+            //print("vida quitada:" + vida);
         }
         else if (collision.gameObject.CompareTag("cuerpo"))
         {
             vida = vida - danio;
-            print("vida actual: jugador" + vida);
+            //print("vida actual: jugador" + vida);
             // if(danio > 0){
             velociad();
             // }
-            print("daño actual jugador: " + danio);
+            //print("daño actual jugador: " + danio);
             // danio = 0;
 
             if (vida <= 0)
             {
                 vida = 0;
-                print("se destruyo" + collision.gameObject);
+                //print("se destruyo" + collision.gameObject);
                 SceneManager.LoadScene("game_over");
             }
+            damage();
         }
         else if (collision.gameObject.CompareTag("trofeo"))
         {
@@ -155,6 +161,11 @@ public class CarController : MonoBehaviour
     {
         // danio = 0;
         counting = true;
+    }
+        void damage()
+    {
+        // danio = 0;
+        dame = true;
     }
 
     void OnCollisionExit(Collision collision)

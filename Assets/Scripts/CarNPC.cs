@@ -131,7 +131,7 @@ public class CarNPC : MonoBehaviour
             if (vida <= 0)
             {
                 vida = 0;
-                print("se destruyo" + collision.gameObject);
+                //print("se destruyo" + collision.gameObject);
                 Destroy(collision.gameObject);
             }
         }

@@ -176,8 +176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 173631155057331175}
   - component: {fileID: 8152869478207225660}
-  - component: {fileID: 4174946659907026336}
   - component: {fileID: 7965321022535046070}
+  - component: {fileID: 4174946659907026336}
   m_Layer: 0
   m_Name: carro2of npc
   m_TagString: cuerpo
@@ -219,19 +219,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &4174946659907026336
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658383375346848093}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1662216, y: 2.547833, z: 3.986878}
-  m_Center: {x: -0.112778425, y: 1.564322, z: -0.1552208}
 --- !u!114 &7965321022535046070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +236,19 @@ MonoBehaviour:
   rotationSpeed: 2
   timepower: 5
   healthBar: {fileID: 1057277210779239009}
+--- !u!65 &4174946659907026336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658383375346848093}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1662216, y: 2.547833, z: 3.986878}
+  m_Center: {x: -0.112778425, y: 1.564322, z: -0.1552208}
 --- !u!1 &1072806298454283881
 GameObject:
   m_ObjectHideFlags: 0
