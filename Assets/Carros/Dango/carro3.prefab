@@ -387,6 +387,7 @@ MonoBehaviour:
   healthBar: {fileID: 4318386261853193952}
   danio: 50
   continerdanio: 50
+  dame: 0
 --- !u!114 &5083582243993304555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4243,11 +4244,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 654531490528164037, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 654531490528164037, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 966971146403110380, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
       propertyPath: m_MaxValue

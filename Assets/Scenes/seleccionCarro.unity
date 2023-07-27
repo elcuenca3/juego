@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObjects:
-  - {fileID: 899266442}
   - {fileID: 1488654832}
-  - {fileID: 2136885580}
+  - {fileID: 899266442}
   - {fileID: 1637514223}
+  - {fileID: 2136885580}
   selectedCharacter: 0
   gameScene: mapaPrueba
 --- !u!1 &259701979
@@ -1330,7 +1330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a9044dd925933b4c8b20eb64d924c60, type: 3}
       propertyPath: m_Name
-      value: donga
+      value: carro3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a9044dd925933b4c8b20eb64d924c60, type: 3}
       propertyPath: m_IsActive
@@ -1412,7 +1412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d717117816a13554bbac00ad98bf0ae6, type: 3}
       propertyPath: m_Name
-      value: foodtruck
+      value: carro2of
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d717117816a13554bbac00ad98bf0ae6, type: 3}
       propertyPath: m_IsActive
@@ -2885,7 +2885,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 156908701}
         m_TargetAssemblyTypeName: CharacterSelectionMenu, Assembly-CSharp
-        m_MethodName: MapaSeleccion
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

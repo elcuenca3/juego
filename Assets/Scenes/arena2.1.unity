@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06855877, g: 0.06837423, b: 0.06848882, a: 1}
+  m_IndirectSpecularColor: {r: 0.06847028, g: 0.06822955, b: 0.068391696, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1151,7 +1151,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1209,14 +1209,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927437561}
-  m_LocalRotation: {x: 0.46428728, y: -0.078115456, z: 0.4067421, w: 0.78287685}
+  m_LocalRotation: {x: 0.52112406, y: 0.04275002, z: 0.3308056, w: 0.7856016}
   m_LocalPosition: {x: -36.5, y: 131.4, z: -13.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 52.233, y: 24.644, z: 67.133}
+  m_LocalEulerAnglesHint: {x: 52.233, y: 42.27, z: 67.133}
 --- !u!1001 &990852074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1573,6 +1573,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   danio: 5
   continerdanio: 0
+  dame: 0
 --- !u!1001 &1350302259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2672,11 +2673,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 320908544286331517, guid: 6ae9965ccf7059248bc8375dfb559e30, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 320908544286331517, guid: 6ae9965ccf7059248bc8375dfb559e30, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1686984874641906297, guid: 6ae9965ccf7059248bc8375dfb559e30, type: 3}
       propertyPath: m_text
@@ -2729,6 +2730,10 @@ PrefabInstance:
     - target: {fileID: 8728401404975295131, guid: 6ae9965ccf7059248bc8375dfb559e30, type: 3}
       propertyPath: m_Name
       value: Food_Truck Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728401404975295131, guid: 6ae9965ccf7059248bc8375dfb559e30, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ae9965ccf7059248bc8375dfb559e30, type: 3}

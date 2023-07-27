@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CharacterSelectionMenu : MonoBehaviour
+public class CharacterSelectionArena : MonoBehaviour
 {
     
     public GameObject[] playerObjects;
@@ -18,7 +18,7 @@ public class CharacterSelectionMenu : MonoBehaviour
 
         HideAllCharacters();
 
-        selectedCharacter = PlayerPrefs.GetInt(selectedCharacterDataName, 0);
+        //selectedCharacter = PlayerPrefs.GetInt(selectedCharacterDataName, 0);
 
         playerObjects[selectedCharacter].SetActive(true);
     }
@@ -53,23 +53,26 @@ public class CharacterSelectionMenu : MonoBehaviour
         }
         playerObjects[selectedCharacter].SetActive(true);
     }
-    public void MapaSeleccion()
-	{
-		SceneManager.LoadScene("seleccionMapa");
-	}
-
-    public void Arenanew()
-	{
-		SceneManager.LoadScene("arena2.1");
-	}
-
+    
 
     public void StartGame()
     {
-        PlayerPrefs.SetInt("IDCARRO",selectedCharacter);
+        PlayerPrefs.SetInt("IDArena",selectedCharacter);
+        switch (selectedCharacter){
+            case 0:
+            SceneManager.LoadScene("arena2.1");
+            break;
+            case 1:
+            SceneManager.LoadScene("arenanew");
+            break;
+            default:
+            break;
+
+            
+        }
         Debug.Log("dddddd"+PlayerPrefs.GetInt("IDCARRO"));
-        SceneManager.LoadScene("seleccionMapa");
-        PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
+        //SceneManager.LoadScene("seleccionMapa");
+        //PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
         //SceneManager.LoadScene(gameScene);
     }
 
