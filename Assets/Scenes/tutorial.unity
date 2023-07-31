@@ -244,11 +244,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObjects:
-  - {fileID: 30764340}
-  - {fileID: 1561378472}
   - {fileID: 190246831}
   - {fileID: 1221284291}
   - {fileID: 1133627262}
+  - {fileID: 30764340}
+  - {fileID: 1561378472}
   selectedCharacter: 0
   gameScene: arena2.1
 --- !u!1 &190246831
