@@ -525,8 +525,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258582539506310121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 16.6, z: 0}
-  m_LocalScale: {x: 28.789, y: 28.789, z: 62.115143}
+  m_LocalPosition: {x: 0, y: 18.2, z: 0}
+  m_LocalScale: {x: 28.789, y: 15.495392, z: 62.115143}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2345906106742090894}
@@ -4202,7 +4202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texto: {fileID: 0}
   MoveSpeed: 400
-  MaxSpeed: 80
+  MaxSpeed: 20
   Drag: 0.98
   SteerAngle: 20
   Traction: 1
@@ -4212,6 +4212,7 @@ MonoBehaviour:
   healthBar: {fileID: 4017434461878209236}
   danio: 25
   continerdanio: 0
+  dame: 0
 --- !u!114 &1805924212875229286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10632,6 +10633,14 @@ PrefabInstance:
     - target: {fileID: 654531490528164037, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 966971146403110380, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
+      propertyPath: m_Value
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 966971146403110380, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
+      propertyPath: m_MaxValue
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5403224614450389886, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
       propertyPath: m_Pivot.x
