@@ -143,6 +143,9 @@ public class CarNPC : MonoBehaviour
         {
             vida= 0;
             Destroy(collision.gameObject);
+        }else if (collision.gameObject.CompareTag("Player"))
+        {
+            transform.position -= transform.forward * moveSpeed * Time.deltaTime;
         }
     }
 

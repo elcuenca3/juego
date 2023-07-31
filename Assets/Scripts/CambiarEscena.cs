@@ -7,7 +7,7 @@ public class CambiarEscena : MonoBehaviour
 {
 	public void LoadSceneinGame()
 	{
-		SceneManager.LoadScene("seleccionCarro");
+		SceneManager.LoadScene("tutorial");
 	}
 	public void LoadSceneinGame1()
 	{

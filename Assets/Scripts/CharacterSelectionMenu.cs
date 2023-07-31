@@ -57,10 +57,9 @@ public class CharacterSelectionMenu : MonoBehaviour
 	{
 		SceneManager.LoadScene("seleccionMapa");
 	}
-
-    public void Arenanew()
+    public void Empezar()
 	{
-		SceneManager.LoadScene("arena2.1");
+		SceneManager.LoadScene("seleccionCarro");
 	}
 
 

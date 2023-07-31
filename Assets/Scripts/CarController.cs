@@ -15,7 +15,7 @@ public class CarController : MonoBehaviour
     private Rigidbody rb;
     public float MoveSpeed = 400;
     public float MaxSpeed = 80;
-    public float Drag = 0.98f;
+    public float Drag = 0.58f;
     public float SteerAngle = 20;
     public float Traction = 1;
 
@@ -111,7 +111,7 @@ public class CarController : MonoBehaviour
         else if (collision.gameObject.CompareTag("powervelociad"))
         {
             // print("velocidad OBTENIDA ");
-            MoveSpeed = 2 * contenerdor;
+            //MoveSpeed = 2 * contenerdor;
             MaxSpeed = 2 * contenerdor;
             velociad();
             Destroy(collision.gameObject);
