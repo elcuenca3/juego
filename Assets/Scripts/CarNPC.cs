@@ -20,9 +20,12 @@ public class CarNPC : MonoBehaviour
     private int danio = 50;
     private bool counting = false;
     public Slider healthBar;
+    //private CarController npc;
+    //public CarController controller;
 
     private void Start()
     {
+        //npc = GetComponent<CarController>();
         randomTarget = GetRandomTarget(); // Obtiene un objetivo aleatorio inicial
         vida = 1000;
         danio = 50;
@@ -104,7 +107,15 @@ public class CarNPC : MonoBehaviour
         float z = Random.Range(-10f, 20f);
         return new Vector3(x, 0f, z);
     }
+    /*
+    public void Die()
+    {
+        // Realizar las acciones necesarias cuando el NPC muera...
 
+        // Verificar el resultado del juego
+      npc.CheckGameResult();
+    }
+    */
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("caer"))

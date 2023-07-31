@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/arena2.1.unity
     guid: e336fcccc07fb404695860070e104690
   - enabled: 1
+    path: Assets/Scenes/arena2.unity
+    guid: 6b729affa0438844f8e6b1e9de1021db
+  - enabled: 1
     path: Assets/Scenes/game_over.unity
     guid: 82c9194c7d8fb4647bf45fdf66a67e96
   - enabled: 1

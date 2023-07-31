@@ -3,7 +3,42 @@ guid: dfa6bc325f37389489b6f16b98832657
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ArenaGate
+    second: {fileID: 2100000, guid: 89d3528708257714f8e313fffe0b793a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ArenaMaterial
+    second: {fileID: 2100000, guid: 1a80bb743ec37a245a6078041124c453, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag
+    second: {fileID: 2100000, guid: c288f5fa004f9ba42b498ef753d6d70f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlagPoleMaterial
+    second: {fileID: 2100000, guid: f850563aad9e4424889c82bec93d6c8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MechanismMaterial
+    second: {fileID: 2100000, guid: 476dfdbad6f251f44a9ac39b37d764a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PillarsMaterial
+    second: {fileID: 2100000, guid: 43015cd0b4eac654bbc045e71aa0c82b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodSpike
+    second: {fileID: 2100000, guid: 37d757a516c34874292a9b874ac67000, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

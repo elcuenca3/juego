@@ -97,6 +97,12 @@ public class CarController : MonoBehaviour
         healthBar.value = vida;
         dame = false;
         }
+        if (vida <= 0)
+            {
+                vida = 0;
+                //print("se destruyo" + collision.gameObject);
+                SceneManager.LoadScene("game_over");
+            }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -107,7 +113,12 @@ public class CarController : MonoBehaviour
             // Invertir los controles aquí
             MoveForce -= transform.forward * MoveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
             transform.position -= MoveForce * Time.deltaTime;
-            
+            if (vida <= 0)
+            {
+                vida = 0;
+                //print("se destruyo" + collision.gameObject);
+                SceneManager.LoadScene("game_over");
+            }
         }
         else if (collision.gameObject.CompareTag("powervelociad"))
         {
@@ -194,6 +205,20 @@ public class CarController : MonoBehaviour
             // Invertir los controles aquí
             MoveForce -= transform.forward * MoveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
             transform.position -= MoveForce * Time.deltaTime;
+        }
+    }
+     public void CheckGameResult()
+    {
+        GameObject[] npcs = GameObject.FindGameObjectsWithTag("caer");
+        if (npcs.Length == 0)
+        {
+            // Cargar la escena de victoria
+            SceneManager.LoadScene("victoria");
+        }
+        else
+        {
+            // Cargar la escena de derrota
+            SceneManager.LoadScene("game_over");
         }
     }
 }

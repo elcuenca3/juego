@@ -4160,6 +4160,10 @@ PrefabInstance:
       propertyPath: m_MaxValue
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 1875779742873104577, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
+      propertyPath: m_text
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5403224614450389886, guid: 1d73085a29dea6544b2cd81137704ea5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
