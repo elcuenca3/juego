@@ -63,7 +63,7 @@ public class CharacterSelectionArena : MonoBehaviour
             SceneManager.LoadScene("arena2.1");
             break;
             case 1:
-            SceneManager.LoadScene("arenanew");
+            SceneManager.LoadScene("arena2");
             break;
             default:
             break;

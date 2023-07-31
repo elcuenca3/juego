@@ -124,8 +124,19 @@ public class CarNPC : MonoBehaviour
             vida = vida - 1;
             // print("vida quitada:" + vida);
         }
-        else if (collision.gameObject.CompareTag("cuerpo"))
+        // else if (collision.gameObject.CompareTag("cuerpo")) { }
+        else if (collision.gameObject.CompareTag("trofeo"))
         {
+            SceneManager.LoadScene("game_over");
+        }
+        else if (collision.gameObject.CompareTag("METEORO"))
+        {
+            vida = 0;
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            transform.position -= transform.forward * moveSpeed * Time.deltaTime;
             vida = vida - danio;
             // print("vida quitada:" + vida);
             if (vida <= 0)
@@ -134,18 +145,6 @@ public class CarNPC : MonoBehaviour
                 //print("se destruyo" + collision.gameObject);
                 Destroy(collision.gameObject);
             }
-        }
-        else if (collision.gameObject.CompareTag("trofeo"))
-        {
-            SceneManager.LoadScene("game_over");
-        }
-        else if (collision.gameObject.CompareTag("METEORO"))
-        {
-            vida= 0;
-            Destroy(collision.gameObject);
-        }else if (collision.gameObject.CompareTag("Player"))
-        {
-            transform.position -= transform.forward * moveSpeed * Time.deltaTime;
         }
     }
 
