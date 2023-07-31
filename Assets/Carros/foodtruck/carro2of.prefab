@@ -420,9 +420,9 @@ MonoBehaviour:
   Traction: 1
   pushForce: 2
   timepower: 5
-  vida: 100
+  vida: 1000
   healthBar: {fileID: 4356184632502943224}
-  danio: 5
+  danio: 25
   continerdanio: 0
   dame: 0
 --- !u!114 &3693222671705489994
@@ -883,7 +883,7 @@ Transform:
   m_GameObject: {fileID: 2029609169418831643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.27, z: -0.33}
-  m_LocalScale: {x: 2.0982544, y: 2.030322, z: 3.3056066}
+  m_LocalScale: {x: 2.0157669, y: 1.9505051, z: 3.1756551}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 173631155057331175}

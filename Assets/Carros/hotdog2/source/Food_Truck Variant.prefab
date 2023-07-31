@@ -513,8 +513,8 @@ MonoBehaviour:
   Traction: 1
   pushForce: 2
   timepower: 5
-  vida: 100
+  vida: 1000
   healthBar: {fileID: 2844783295280980}
-  danio: 5
+  danio: 25
   continerdanio: 0
   dame: 0

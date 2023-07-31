@@ -4202,7 +4202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texto: {fileID: 0}
   MoveSpeed: 400
-  MaxSpeed: 20
+  MaxSpeed: 80
   Drag: 0.98
   SteerAngle: 20
   Traction: 1

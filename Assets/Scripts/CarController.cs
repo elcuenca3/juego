@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,7 +37,7 @@ public class CarController : MonoBehaviour
     void Start()
     {
         vida = 1000;
-        danio = 25;
+        danio = 10;
         rb = GetComponent<Rigidbody>();
         contenerdor = MoveSpeed;
         contenerdorMax = MaxSpeed;
@@ -92,17 +92,17 @@ public class CarController : MonoBehaviour
             Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime)
             * MoveForce.magnitude;
         // print(tiempoActual);
-        if(dame){
-
-        healthBar.value = vida;
-        dame = false;
+        if (dame)
+        {
+            healthBar.value = vida;
+            // dame = false;
         }
         if (vida <= 0)
-            {
-                vida = 0;
-                //print("se destruyo" + collision.gameObject);
-                SceneManager.LoadScene("game_over");
-            }
+        {
+            vida = 0;
+            //print("se destruyo" + collision.gameObject);
+            SceneManager.LoadScene("game_over");
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -111,8 +111,10 @@ public class CarController : MonoBehaviour
         {
             // print("caer ENTRO");
             // Invertir los controles aquí
+            vida = vida - danio;
             MoveForce -= transform.forward * MoveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
             transform.position -= MoveForce * Time.deltaTime;
+            damage();
             if (vida <= 0)
             {
                 vida = 0;
@@ -149,11 +151,13 @@ public class CarController : MonoBehaviour
             // }
             //print("daño actual jugador: " + danio);
             // danio = 0;
+            print("choco");
 
             if (vida <= 0)
             {
                 vida = 0;
                 //print("se destruyo" + collision.gameObject);
+                print("el pendejo se murio");
                 SceneManager.LoadScene("game_over");
             }
             damage();
@@ -164,8 +168,9 @@ public class CarController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("METEORO"))
         {
-            vida =0;
+            vida = 0;
             Destroy(collision.gameObject);
+            SceneManager.LoadScene("game_over");
         }
     }
 
@@ -174,7 +179,8 @@ public class CarController : MonoBehaviour
         // danio = 0;
         counting = true;
     }
-        void damage()
+
+    void damage()
     {
         // danio = 0;
         dame = true;
@@ -207,7 +213,8 @@ public class CarController : MonoBehaviour
             transform.position -= MoveForce * Time.deltaTime;
         }
     }
-     public void CheckGameResult()
+
+    public void CheckGameResult()
     {
         GameObject[] npcs = GameObject.FindGameObjectsWithTag("caer");
         if (npcs.Length == 0)

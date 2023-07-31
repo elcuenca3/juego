@@ -17,9 +17,10 @@ public class CarNPC : MonoBehaviour
     private float tiempoActual;
     public float timepower = 5f;
     private int vida = 1000;
-    private int danio = 50;
+    private int danio = 1;
     private bool counting = false;
     public Slider healthBar;
+
     //private CarController npc;
     //public CarController controller;
 
@@ -28,7 +29,7 @@ public class CarNPC : MonoBehaviour
         //npc = GetComponent<CarController>();
         randomTarget = GetRandomTarget(); // Obtiene un objetivo aleatorio inicial
         vida = 1000;
-        danio = 50;
+        danio = 1;
     }
 
     private void Update()
@@ -98,6 +99,8 @@ public class CarNPC : MonoBehaviour
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
         healthBar.value = vida;
+
+        
     }
 
     private Vector3 GetRandomTarget()
@@ -107,6 +110,7 @@ public class CarNPC : MonoBehaviour
         float z = Random.Range(-10f, 20f);
         return new Vector3(x, 0f, z);
     }
+
     /*
     public void Die()
     {
@@ -122,6 +126,29 @@ public class CarNPC : MonoBehaviour
         {
             // print("caer ENTRO");
             // Invertir los controles aquí
+             transform.position -= transform.forward * moveSpeed * Time.deltaTime;
+            vida = vida - danio;
+            print("vida quitada:" + vida);
+            if (vida <= 0)
+            {
+                vida = 0;
+                //print("se destruyo" + collision.gameObject);
+                Destroy(collision.gameObject);
+                // SceneManager.LoadScene("game_over");
+            }
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            transform.position -= transform.forward * moveSpeed * Time.deltaTime;
+            vida = vida - danio;
+            // print("vida quitada:" + vida);
+            // if (vida <= 0)
+            // {
+            //     vida = 0;
+            //     //print("se destruyo" + collision.gameObject);
+                // Destroy(collision.gameObject);
+            //     // SceneManager.LoadScene("game_over");
+            // }
         }
         else if (collision.gameObject.CompareTag("powervida"))
         {
@@ -145,7 +172,7 @@ public class CarNPC : MonoBehaviour
             vida = 0;
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("cuerpo"))
         {
             transform.position -= transform.forward * moveSpeed * Time.deltaTime;
             vida = vida - danio;
@@ -155,6 +182,7 @@ public class CarNPC : MonoBehaviour
                 vida = 0;
                 //print("se destruyo" + collision.gameObject);
                 Destroy(collision.gameObject);
+                // SceneManager.LoadScene("game_over");
             }
         }
     }
