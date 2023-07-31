@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11310676, g: 0.036442477, b: 0.07614455, a: 1}
+  m_IndirectSpecularColor: {r: 0.1130951, g: 0.03643831, b: 0.07613732, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -539,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d762671315356243afd27b55b3a8ddc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -23.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d762671315356243afd27b55b3a8ddc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1789,7 +1789,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1160783889
 MonoBehaviour:
@@ -2003,7 +2003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924013827781158164, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5924013827781158164, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2211,7 +2211,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1513014650
 MonoBehaviour:
@@ -2356,13 +2356,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605574812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1497.1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1497.1, z: -23.1}
   m_LocalScale: {x: 20.974, y: 1, z: 15.693}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1605574817
 MonoBehaviour:
@@ -2531,7 +2531,7 @@ MonoBehaviour:
   - {fileID: 5865828418411537796, guid: be79bd7ddcb61324fad4a7ba10e2a162, type: 3}
   - {fileID: 4692875806378329178, guid: 1df0f69940cf83e429e07d65ea74fc12, type: 3}
   powerUpsToSpawn: []
-  spawnDelay: 25
+  spawnDelay: 20
   powerUpSpawnDelay: 60
 --- !u!4 &1798054529
 Transform:
@@ -2546,7 +2546,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799780662 stripped
 GameObject:
@@ -3106,7 +3106,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &1974038449
 PrefabInstance:

@@ -20,6 +20,8 @@ public class CarNPC : MonoBehaviour
     private int danio = 1;
     private bool counting = false;
     public Slider healthBar;
+    public bool dame = false;
+
 
     //private CarController npc;
     //public CarController controller;
@@ -29,7 +31,7 @@ public class CarNPC : MonoBehaviour
         //npc = GetComponent<CarController>();
         randomTarget = GetRandomTarget(); // Obtiene un objetivo aleatorio inicial
         vida = 1000;
-        danio = 1;
+        danio = 11;
     }
 
     private void Update()
@@ -78,6 +80,10 @@ public class CarNPC : MonoBehaviour
                 );
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
             }
+        }if (dame)
+        {
+            healthBar.value = vida;
+            // dame = false;
         }
         else
         {
@@ -120,6 +126,11 @@ public class CarNPC : MonoBehaviour
       npc.CheckGameResult();
     }
     */
+    void damage()
+    {
+        // danio = 0;
+        dame = true;
+    }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("caer"))

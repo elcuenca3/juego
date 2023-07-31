@@ -16,7 +16,7 @@ public class CarController : MonoBehaviour
     public float MoveSpeed = 400;
     public float MaxSpeed = 80;
     public float Drag = 0.98f;
-    public float SteerAngle = 20;
+    public float SteerAngle = 10;
     public float Traction = 1;
 
     public float pushForce = 2f;
@@ -37,7 +37,7 @@ public class CarController : MonoBehaviour
     void Start()
     {
         vida = 1000;
-        danio = 10;
+        danio = 7;
         rb = GetComponent<Rigidbody>();
         contenerdor = MoveSpeed;
         contenerdorMax = MaxSpeed;
@@ -125,7 +125,7 @@ public class CarController : MonoBehaviour
         else if (collision.gameObject.CompareTag("powervelociad"))
         {
             // print("velocidad OBTENIDA ");
-            MoveSpeed = 2 * contenerdor;
+            //MoveSpeed = 2 * contenerdor;
             MaxSpeed = 2 * contenerdor;
             velociad();
             Destroy(collision.gameObject);
@@ -133,7 +133,7 @@ public class CarController : MonoBehaviour
         else if (collision.gameObject.CompareTag("powervida"))
         {
             print("vida OBTENIDA ");
-            vida = vida + danio;
+            vida = vida + 100;
             // print("vida ya curada "+vida);
             Destroy(collision.gameObject);
         }
@@ -157,7 +157,6 @@ public class CarController : MonoBehaviour
             {
                 vida = 0;
                 //print("se destruyo" + collision.gameObject);
-                print("el pendejo se murio");
                 SceneManager.LoadScene("game_over");
             }
             damage();

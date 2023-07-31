@@ -379,7 +379,7 @@ MonoBehaviour:
   MoveSpeed: 400
   MaxSpeed: 80
   Drag: 0.98
-  SteerAngle: 20
+  SteerAngle: 10
   Traction: 1
   pushForce: 2
   timepower: 5
